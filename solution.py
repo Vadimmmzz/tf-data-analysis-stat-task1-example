@@ -4,6 +4,7 @@ import numpy as np
 chat_id = 230865321 
 
 def solution(x: np.array) -> float:
-    x=x+21
-    y=np.exp(x)
-    return y.mean()/10
+    l = len(x)
+    mist = np.random.normal(-21, np.exp(1), l)
+    y = (x - mist)/10
+    return y.mean()
