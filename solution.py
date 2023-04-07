@@ -6,5 +6,5 @@ chat_id = 230865321
 def solution(x: np.array) -> float:
     l = len(x)
     mist = np.random.normal(-21, np.exp(1), l)
-    y = (x - mist)/10
+    y = (x + mist)/10
     return y.mean()
